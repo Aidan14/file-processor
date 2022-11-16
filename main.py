@@ -24,10 +24,10 @@ def main():
 
     in_file.close()
 
-    if os.path.exists(os.environ['OUTPUT_PATH']):
-        out_file = open(os.environ['OUTPUT_PATH'], 'w')
+    if os.path.exists('output.txt'):
+        out_file = open('output.txt', 'w')
     else:
-        out_file = open(os.environ['OUTPUT_PATH'], 'x')
+        out_file = open('output.txt', 'x')
 
     out_file.writelines(usable_lines)
     out_file.close()
